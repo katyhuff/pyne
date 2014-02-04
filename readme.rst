@@ -20,6 +20,7 @@ http://pynesim.org/, the official PyNE projectsite.
 ============
 Installation
 ============
+
 -------------
 Dependencies
 -------------
@@ -71,9 +72,52 @@ or from public sources on the internet.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Mac OSX Specific Instructions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-| The instructions are based on using the homebrew http://brew.sh/ package manager
-| Install command line tools from https://developer.apple.com/downloads/
-| you will need to create an account in order to download.
+
+| You will first need to install command line tools from 
+| https://developer.apple.com/downloads/ you will need to create an account in 
+| order to download it.
+| 
+| Next, select a package manager. There are instructions below for Homebrew and 
+| MacPorts.
+
+........
+MacPorts
+........
+
+First, install Macports: http://www.macports.org/install.php .
+
+Once that's installed:
+
+::
+    sudo port install python-27
+    sudo port install hdf5-18
+    sudo port install cmake
+    sudo port install py27-scipy
+    sudo port install py27-numpy
+    sudo port install py27-tables
+    sudo easy_install cython
+
+
+It may be necessary to add the pyne library path to the
+``DYLD_FALLBACK_LIBRARY_PATH`` environment variable *before* running 
+``nuc_data_make``. To do this, add the following lines to your 
+``~/.bashrc`` file where ``/path/to/pyne/lib`` is the absolute path to the 
+directory containing libpyne.dylib ::
+
+    DYLD_FALLBACK_LIBRARY_PATH="${DYLD_FALLBACK_LIBRARY_PATH}:/path/to/pyne/lib"
+    export DYLD_FALLBACK_LIBRARY_PATH
+
+Once those lines have been added, run the following command before running 
+``nuc_data_make`` ::
+
+    source ~/.bashrc
+
+........
+Homebrew
+........
+
+| These instructions are based on using the homebrew http://brew.sh/ package manager
+
 ::
 
     ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
@@ -118,6 +162,7 @@ Once those lines have been added, run the following command before running
 ``nuc_data_make`` ::
 
     source ~/.bashrc
+
 
 .. install-end
 
