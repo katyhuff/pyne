@@ -86,9 +86,8 @@ MacPorts
 
 First, install Macports: http://www.macports.org/install.php .
 
-Once that's installed:
+Once that's installed::
 
-::
     sudo port install python-27
     sudo port install hdf5-18
     sudo port install cmake
