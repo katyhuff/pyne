@@ -18,7 +18,7 @@ ideas for contributions appropriate for students at a number of levels.
     ahotn_proj
     hexmesh_proj
     transport_proj
-    template_proj
+    scattering_proj 
 
 
 .. include:: intro.rst
@@ -31,4 +31,4 @@ ideas for contributions appropriate for students at a number of levels.
 
 .. include:: transport_proj.rst
 
-.. include:: template_proj.rst
+.. include:: scattering_proj.rst
